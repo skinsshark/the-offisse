@@ -2,7 +2,7 @@
   "name": "the-offisse",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://skinsshark.github.io/the-offisse",
+  "homepage": "https://the-offisse.vercel.app/",
   "dependencies": {
     "contentful": "^6.1.1",
     "gh-pages": "^1.2.0",
