@@ -29,6 +29,12 @@ header {
   align-items: center;
 }
 
+@media only screen and (max-width: 991px) {
+  .header-wrapper {
+    width: 80%;
+  }
+}
+
 header a {
   font-style: italic;
 }
@@ -40,7 +46,6 @@ header a:hover {
 header h1 {
   text-transform: uppercase;
   font-size: 2.6rem;
-  font-weight: normal;
 }
 
 header h1,
@@ -86,5 +91,43 @@ section {
   section {
     width: 100%;
     margin: 150px 0 50px 0;
+  }
+}
+
+.info {
+  font-size: 19px;
+  font-weight: normal;
+  padding-left: 75px;
+  position: relative;
+  margin: 15px 0 0;
+}
+
+.info .title {
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.info .episodeData,
+.quote {
+  font-family: 'times-now';
+}
+
+.info .episodeData {
+  width: 75px;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  font-size: 13px;
+  line-height: 1;
+}
+
+.quote {
+  font-size: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .info .episodeData {
+    left: 10px;
   }
 }

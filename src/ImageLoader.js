@@ -26,9 +26,20 @@ class ImageLoader extends Component {
     const height = source.details.image.height;
     const buffer = `${height/width*GRID_WIDTH}%`; // *grid_width
 
+    const episodeNumberRegex = /Season (\d) Episode (\d*): (.*)/g;
+    const matches = this.props.fields.episode.matchAll(episodeNumberRegex);
+    let season, episode, title;
+
+    for (const match of matches) {
+      if (match != null) {
+        season = match[1];
+        episode = match[2];
+        title = match[3];
+      }
+    }
     return (
       <React.Fragment>
-        <div className="image-wrapper" style={{paddingBottom: buffer}}>
+        <div className="image-wrapper" style={{paddingBottom: buffer, width: `${GRID_WIDTH}%`}}>
           {this.props.fields.link ? (
             <a href={this.props.fields.link} target="_blank" rel="noopener noreferrer">
               <img
@@ -51,7 +62,11 @@ class ImageLoader extends Component {
             </React.Fragment>
           )}
         </div>
-        <p>{this.props.fields.episode}</p>
+        <h3 className="info">
+          <label className="episodeData">{`S${season}E${episode}`}</label>
+          <span className="title">{title}</span>
+        </h3>
+        <p className="quote">{this.props.fields.quote}</p>
       </React.Fragment>
     );
   }
