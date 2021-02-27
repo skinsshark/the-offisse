@@ -41,10 +41,12 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <h1>
-            The Offisse
-          </h1>
-          <p>"High end fashion inspired by The Office" <span>by <a href="https://sharonzheng.com/" target="_blank" rel="noopener noreferrer">Sharon Zheng</a></span></p>
+          <div className="header-wrapper">
+            <h1>
+              The Offisse
+            </h1>
+            <p>"High end fashion inspired by The Office" <span>by <a href="https://sharonzheng.com/" target="_blank" rel="noopener noreferrer">Sharon Zheng</a></span></p>
+          </div>
         </header>
 
         <section>

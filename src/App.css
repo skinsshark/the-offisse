@@ -10,9 +10,23 @@ body {
 }
 
 header {
-  text-align: center;
-  margin-top: 80px;
+  padding: 10px 0 15px;
   width: 100%;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-wrapper {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 header a {
@@ -25,8 +39,13 @@ header a:hover {
 
 header h1 {
   text-transform: uppercase;
-  font-size: 3rem;
-  margin: 3rem 0 0;
+  font-size: 2.6rem;
+  font-weight: normal;
+}
+
+header h1,
+header p {
+  margin: 0;
 }
 
 header span {
@@ -35,10 +54,10 @@ header span {
 }
 
 @media only screen and (max-width: 767px) {
-  header {
-    padding: 0 10%;
-    margin-top: 50px;
-    margin-bottom: 80px;
+  .header-wrapper {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -56,15 +75,16 @@ section {
   align-items: center;
   margin: 100px 0 50px;
   width: 90%;
+  z-index: 0;
 }
 
 @media only screen and (max-width: 767px) {
   .row {
-    width: 90%;
+    width: 100%;
   }
 
   section {
     width: 100%;
-    margin: 0 0 50px 0;
+    margin: 150px 0 50px 0;
   }
 }
