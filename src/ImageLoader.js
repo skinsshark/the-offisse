@@ -10,10 +10,7 @@ class ImageLoader extends Component {
       '.lozad', {
         load: (el) => {
             el.src = el.dataset.src;
-            el.onload = () => {
-              el.classList.remove('ready');
-                el.classList.add('loaded', 'down');
-            }
+            el.onload = () => el.classList.remove('ready');
         }
     });
   }
@@ -30,28 +27,32 @@ class ImageLoader extends Component {
     const buffer = `${height/width*GRID_WIDTH}%`; // *grid_width
 
     return (
-      <div className="image-wrapper" style={{paddingBottom: buffer}}>
-        {this.props.fields.link ? (
-          <a href={this.props.fields.link} target="_blank" rel="noopener noreferrer">
-            <img
-              className="lozad ready"
-              data-src={source.url}
-              alt={this.props.alt}
-            />
-            <div className="screen" style={{paddingBottom: buffer}} />
-          </a>) :
-          (
-            <React.Fragment>
-            <img
-              className="lozad ready"
-              data-src={source.url}
-              alt={this.props.alt}
-            />
-            <div className="screen" style={{paddingBottom: buffer}} />
-          </React.Fragment>
-        )}
+      <React.Fragment>
+        <div className="image-wrapper" style={{paddingBottom: buffer}}>
+          {this.props.fields.link ? (
+            <a href={this.props.fields.link} target="_blank" rel="noopener noreferrer">
+              <img
+                className="lozad ready"
+                src={`${source.url}?w=50`}
+                data-src={source.url}
+                alt={this.props.alt}
+              />
+              <div className="screen" style={{paddingBottom: buffer}} />
+            </a>) :
+            (
+              <React.Fragment>
+              <img
+                className="lozad ready"
+                src={`${source.url}?w=50`}
+                data-src={source.url}
+                alt={this.props.alt}
+              />
+              <div className="screen" style={{paddingBottom: buffer}} />
+            </React.Fragment>
+          )}
+        </div>
         <p>{this.props.fields.episode}</p>
-      </div>
+      </React.Fragment>
     );
   }
 }
