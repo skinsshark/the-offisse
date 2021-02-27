@@ -1,0 +1,79 @@
+.image-wrapper {
+  display: inline-block;
+  height: 0;
+  position: relative;
+  width: 100%;
+  margin: 80px 0;
+}
+
+.image-wrapper p {
+  position: absolute;
+  bottom: -30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .image-wrapper p {
+    bottom: -25px;
+    left: 10px;
+    font-size: 1.4rem;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .image-wrapper {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .image-wrapper {
+    margin: 40px 0;
+  }
+}
+
+.image-wrapper img {
+  position: absolute;
+  width: 100%;
+}
+
+.screen {
+  width: 100%;
+  height: 0;
+  position: absolute;
+  top: 0;
+  z-index: 9999;
+  background-color: #111;
+  animation: pulse 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #111;
+  }
+
+  50% {
+    background-color: #ccc;
+  }
+
+  100% {
+    background-color: #111;
+  }
+}
+
+.down + .screen.screen {
+  animation-name: reveal;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
+@keyframes reveal {
+  100% {
+    opacity: 0;
+  }
+}
+
+.ready {
+  opacity: 0;
+}

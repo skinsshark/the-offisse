@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  text-align: center;
+  margin-top: 80px;
+  width: 100%;
+}
+
+header a {
+  font-style: italic;
+}
+
+header a:hover {
+  font-style: normal;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  margin: 3rem 0 0;
+}
+
+header span {
+  word-break: keep-all;
+  display: inline-block;
+}
+
+@media only screen and (max-width: 767px) {
+  header {
+    padding: 0 10%;
+    margin-top: 50px;
+    margin-bottom: 80px;
+  }
+}
+
+section p {
+  margin: 0;
+}
+
+.row {
+  width: 69%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px 0 50px;
+  width: 90%;
+}
+
+@media only screen and (max-width: 767px) {
+  .row {
+    width: 90%;
+  }
+
+  section {
+    width: 100%;
+    margin: 0 0 50px 0;
+  }
+}

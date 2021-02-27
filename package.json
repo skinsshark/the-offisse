@@ -1,0 +1,36 @@
+{
+  "name": "the-offisse",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://skinsshark.github.io/the-offisse",
+  "dependencies": {
+    "contentful": "^6.1.1",
+    "gh-pages": "^1.2.0",
+    "intersection-observer": "^0.5.0",
+    "lozad": "^1.4.0",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.2",
+    "react-masonry-component": "^6.2.1",
+    "react-scripts": "^4.0.3"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
