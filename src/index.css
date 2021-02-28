@@ -15,6 +15,8 @@ body {
   letter-spacing: 0.05rem;
   font-size: 1.5rem;
   color: #333;
+  font-weight: 400;
+  cursor: default;
 }
 
 a,
@@ -32,4 +34,27 @@ a:hover {
 
 .invisible {
   display: none;
+}
+
+.page-wrapper h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0 0 3px;
+}
+
+@media only screen and (max-width: 991px) {
+  .page-wrapper h2 {
+    margin-bottom: 0;
+  }
+}
+
+.page-wrapper h2,
+.page-wrapper li {
+  font-size: 11px;
+  letter-spacing: 0.09px;
+  text-rendering: optimizeLegibility;
+}
+
+nav li {
+  margin-bottom: 3px;
 }

@@ -1,5 +1,5 @@
 import lozad from 'lozad';
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
 import './ImageLoader.css';
 
@@ -33,30 +33,25 @@ function ImageLoader(props) {
       title = match[3];
     }
   }
+
+  const imageEl = (
+    <img
+      className="lozad ready"
+      src={`${source.url}?w=50`}
+      data-src={source.url}
+      alt={props.alt}
+    />
+  );
+
   return (
     <>
       <div className="image-wrapper" style={{paddingBottom: buffer, width: `${GRID_WIDTH}%`}}>
-        {props.fields.link ? (
+        {props.fields.link ?
           <a href={props.fields.link} target="_blank" rel="noopener noreferrer">
-            <img
-              className="lozad ready"
-              src={`${source.url}?w=50`}
-              data-src={source.url}
-              alt={props.alt}
-            />
-            <div className="screen" style={{paddingBottom: buffer}} />
-          </a>) :
-          (
-            <>
-            <img
-              className="lozad ready"
-              src={`${source.url}?w=50`}
-              data-src={source.url}
-              alt={props.alt}
-            />
-            <div className="screen" style={{paddingBottom: buffer}} />
-          </>
-        )}
+            {imageEl}
+          </a>
+          : {imageEl}
+        }
       </div>
       <h3 className="info">
         <label className="episodeData">{`S${season}E${episode}`}</label>

@@ -7,12 +7,18 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-top: 85px;
+}
+
+@media only screen and (max-width: 991px) {
+  .app {
+    padding-top: 50px;
+  }
 }
 
 header {
   padding: 10px 0 15px;
   width: 100%;
-  background-color: #fff;
   position: fixed;
   top: 0;
   left: 0;
@@ -71,32 +77,84 @@ section p {
 }
 
 .row {
-  width: 69%;
+  width: 100%;
+  margin-bottom: 50px;
 }
 
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 100px 0 50px;
-  width: 90%;
+  margin: 0 0 50px;
+  flex-grow: 1;
   z-index: 0;
+  padding: 0 15vw;
 }
 
-@media only screen and (max-width: 767px) {
-  .row {
-    width: 97%;
+.page-wrapper {
+  display: flex;
+  padding: 0 55px;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1299px) {
+  section {
+    padding: 0 195px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  nav {
+    display: none;
+  }
+
+  .page-wrapper {
+    padding: 0 10px;
   }
 
   section {
-    width: 97%;
-    margin: 150px 0 50px 0;
+    padding: 0;
+  }
+}
+
+nav {
+  flex-shrink: 0;
+}
+
+nav article {
+  margin-bottom: 40px;
+}
+
+.page-wrapper li {
+  list-style-type: none;
+}
+
+.fixed-sidebar {
+  position: fixed;
+  width: 200px;
+}
+
+.fixed-sidebar.description {
+  right: 55px;
+  padding-left: 20px;
+}
+
+@media only screen and (max-width: 991px) {
+  .page-wrapper {
+    flex-direction: column-reverse;
+  }
+
+  .fixed-sidebar.description {
+    position: relative;
+    right: 0;
+    width: 100%;
+    margin-bottom: 50px;
   }
 }
 
 .info {
   font-size: 19px;
-  font-weight: normal;
+  font-weight: 400;
   padding-left: 75px;
   position: relative;
   margin: 15px 0 0;
@@ -118,20 +176,9 @@ section {
   position: absolute;
   left: 0;
   bottom: 2px;
-  font-size: 13px;
   line-height: 1;
 }
 
 .quote {
   font-size: 20px;
-}
-
-@media only screen and (max-width: 767px) {
-  .info .episodeData {
-    left: 10px;
-  }
-
-  .quote {
-    padding-left: 10px;
-  }
 }
