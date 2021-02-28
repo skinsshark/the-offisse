@@ -76,7 +76,15 @@ function App() {
 
         <div className="fixed-sidebar description">
           <h2>About</h2>
-          <li>High end fashion inspired by <nobr>The Office (US)</nobr> by Sharon Zheng.</li>
+          <li>
+            A collection curated by
+            {' '}
+            <a href="https://sharonzheng.com/" target="_blank">Sharon Zheng</a>
+            , combining her 3 favorite hobbies: creating websites from scratch, rewatching The Office (US), and shopping on
+            {' '}
+            <a href="https://ssense.com/" target="_blank">SSENSE</a>
+            .
+          </li>
         </div>
       </div>
     </div>

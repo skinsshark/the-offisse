@@ -24,11 +24,11 @@ a:focus,
 a:visited,
 a:active {
   color: #333;
+  font-style: italic;
   text-decoration: none;
 }
 
 a:hover {
-  font-style: italic;
   cursor: crosshair;
 }
 

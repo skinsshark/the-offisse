@@ -12,7 +12,7 @@
   bottom: -30px;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 991px) {
   .image-wrapper {
     margin: 40px 0 0;
   }
