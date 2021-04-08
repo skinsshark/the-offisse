@@ -79,7 +79,7 @@ function App() {
           <li>
             A collection curated by
             {' '}
-            <a href="https://sharonzheng.club/" target="_blank">Sharon Zheng</a>
+            <a href="https://sharonzheng.com/" target="_blank">Sharon Zheng</a>
             , combining her 3 favorite hobbies: creating websites from scratch, rewatching The Office (US), and shopping on
             {' '}
             <a href="https://ssense.com/" target="_blank">SSENSE</a>
